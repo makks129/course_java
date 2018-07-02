@@ -1,8 +1,10 @@
 package lesson1.homework;
 
+import java.util.Scanner;
+
 /**
  * Write a converter from pounds to kilos
- * Use JOptionPane for input and output
+ * Use Scanner for input and System.out.println for output
  */
 public class Homework2 {
 
