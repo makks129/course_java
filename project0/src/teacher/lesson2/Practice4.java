@@ -1,4 +1,4 @@
-package lesson2;
+package teacher.lesson2;
 
 /**
  * FROM LESSON 1 HOMEWORK 4

@@ -5,8 +5,7 @@ import java.util.Scanner;
 /**
  * CODE STYLE IS IMPORTANT!
  */
-public class Practice0
-{                                                   // bad
+public class Practice0 {                                                   // bad
 
     public static void main(String[] args)
     {                                               // bad
