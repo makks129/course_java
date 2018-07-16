@@ -1,7 +1,5 @@
 package lesson6;
 
-import geometry.Circle;
-
 public class Test {
 
     public static void main(String[] args) {

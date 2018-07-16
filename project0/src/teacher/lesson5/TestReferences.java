@@ -1,6 +1,6 @@
 package teacher.lesson5;
 
-import geometry.Circle;
+import collection.geometry.Circle;
 
 public class TestReferences {
 

@@ -1,4 +1,4 @@
-package geometry;
+package collection.geometry;
 
 public class CircleUtils {
 

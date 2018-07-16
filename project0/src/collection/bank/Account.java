@@ -1,4 +1,4 @@
-package lesson5.homework;
+package collection.bank;
 
 public class Account {
 
