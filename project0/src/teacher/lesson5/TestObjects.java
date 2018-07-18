@@ -7,16 +7,16 @@ public class TestObjects {
     public static void main(String[] args) {
 
 
-        Circle circle1 = new Circle();
+        Circle circle1 = new Circle(10);
         Circle circle2 = new Circle(10);
         Circle circle3 = new Circle(10, 0, 0);
-        Circle circle4 = new Circle(10, 0, 0, "red");
+//        Circle circle4 = new Circle(10, 0, 0, "red");
 
 
-        circle1.radius = 5;
-        circle1.centerX = 0;
-        circle1.centerY = 0;
-        circle1.color = "blue";
+//        circle1.radius = 5;
+//        circle1.centerX = 0;
+//        circle1.centerY = 0;
+//        circle1.color = "blue";
 
         System.out.println(circle1.radius);
 

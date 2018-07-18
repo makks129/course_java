@@ -2,6 +2,8 @@ package collection.social_network;
 
 public class SocialNetwork {
 
+    private static SocialNetwork instance;
+
     private String name;
     private final long dateCreated;
     private User[] users;
@@ -10,10 +12,16 @@ public class SocialNetwork {
     private Audio[] audios;
     private Video[] videos;
 
-    public SocialNetwork(String name) {
+    private SocialNetwork(String name) {
         this.name = name;
         dateCreated = System.currentTimeMillis();
     }
 
+    public static SocialNetwork getInstance(String name) {
+        if (instance == null) {
+            instance = new SocialNetwork(name);
+        }
+        return instance;
+    }
 
 }

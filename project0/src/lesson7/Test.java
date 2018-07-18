@@ -1,7 +1,8 @@
 package lesson7;
 
-import collection.games.GeoQuiz;
+import collection.games.geo_quiz.GeoQuiz;
 import collection.mathematics.Rational;
+import collection.social_network.SocialNetwork;
 
 import java.util.Scanner;
 
@@ -29,6 +30,9 @@ public class Test {
             game1.makeGuess(userGuess);
         }
         game1.printResults();
+
+
+
 
 
     }

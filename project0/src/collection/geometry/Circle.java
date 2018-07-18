@@ -1,54 +1,47 @@
 package collection.geometry;
 
-public class Circle {
-
-    public static final String COLOR_RED = "red";
-    public static final String COLOR_GREEN = "green";
-    public static final String COLOR_BLUE = "blue";
+public class Circle extends GeometricObject {
 
     public double radius;
     private double centerX;
     private double centerY;
-    private String color;
-    private long dateCreated;
 
     private static int numberOfCircles;
 
     private Circle() {
-        dateCreated = System.currentTimeMillis();
         numberOfCircles++;
+        System.out.println("Constructor in Circle()");
     }
 
     public Circle(double radius) {
         this();
         this.radius = radius;
+        System.out.println("Constructor in Circle(double radius)");
     }
 
     public Circle(double radius, double centerX, double centerY) {
         this(radius);
         this.centerX = centerX;
         this.centerY = centerY;
-    }
-
-    public Circle(double radius, double centerX, double centerY, String color) {
-        this(radius, centerX, centerY);
-        this.color = color;
+        System.out.println("Constructor in Circle(double radius, double centerX, double centerY)");
     }
 
     public static int getNumberOfCircles() {
         return numberOfCircles;
     }
 
+    @Override
     public double getArea() {
         return radius * radius * Math.PI;
     }
 
+    @Override
     public double getPerimeter() {
         return 2 * Math.PI * radius;
     }
 
     public void print() {
-        System.out.println("radius = " + radius + ", color = " + color);
+        System.out.println("radius = " + radius + " color = " + color);
     }
 
 
@@ -78,21 +71,5 @@ public class Circle {
     public void setCenterY(double centerY) {
         this.centerY = centerY;
     }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        if (color.equals("")) {
-            return;
-        }
-        this.color = color;
-    }
-
-    public long getDateCreated() {
-        return dateCreated;
-    }
-
 
 }

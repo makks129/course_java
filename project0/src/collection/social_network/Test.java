@@ -4,9 +4,11 @@ public class Test {
 
     public static void main(String[] args) {
 
-        SocialNetwork vkontakte = new SocialNetwork("VK");
+
+        SocialNetwork vkontakte = SocialNetwork.getInstance("VK");
 
 
     }
+
 
 }

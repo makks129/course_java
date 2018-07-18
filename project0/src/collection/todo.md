@@ -40,7 +40,6 @@ Teacher
 Course
 etc.
 
-
 ### Geometry
 - class Triangle
 - class Cylinder
@@ -92,7 +91,7 @@ etc.
     * Description: represents a loan in a bank
     * Fields: loanAmount, loanDate, interestRate, years
     * Methods: getMonthlyPayment, getTotalPayment
-    
+
 ### Containers
 - class Stack
     * LIFO container
@@ -115,4 +114,3 @@ etc.
     * only stores first and last element (both inclusive), for example range of (1, 10) stores only 1 and 10 in its fields
     * range must always go up (must be 1 to 10, cannot be 10 to 1)
     * methods: sum ranges, check if two ranges intersect
-    

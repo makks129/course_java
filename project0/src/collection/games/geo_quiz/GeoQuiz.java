@@ -1,4 +1,4 @@
-package collection.games;
+package collection.games.geo_quiz;
 
 public class GeoQuiz {
 
