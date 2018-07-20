@@ -1,6 +1,6 @@
 package collection.games.rpg;
 
-import collection.games.rpg.heros.Hero;
+import collection.games.rpg.creatures.heros.Hero;
 
 public class Player {
 
