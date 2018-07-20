@@ -1,6 +1,8 @@
 package lesson7;
 
 import collection.games.geo_quiz.GeoQuiz;
+import collection.geometry.Circle;
+import collection.geometry.Rectangle;
 import collection.mathematics.Rational;
 import collection.social_network.SocialNetwork;
 
@@ -30,6 +32,10 @@ public class Test {
             game1.makeGuess(userGuess);
         }
         game1.printResults();
+
+
+
+
 
 
 

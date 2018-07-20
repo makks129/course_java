@@ -5,8 +5,8 @@ import collection.games.rpg.creatures.races.Race;
 
 public class Hero extends Character {
 
-    public Hero(Race race, String name, int health, int strength, int intelligence, int agility) {
-        super(race, name, health, strength, intelligence, agility);
+    protected Hero(Race race, String name, int strength, int intelligence, int agility) {
+        super(race, name, strength, intelligence, agility);
     }
 
 }

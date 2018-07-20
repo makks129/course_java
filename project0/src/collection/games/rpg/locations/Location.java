@@ -5,11 +5,11 @@ import collection.games.rpg.creatures.heros.Hero;
 public class Location {
 
     protected String name;
-    protected Hero[] heros; // spaces for heroes, not every element is a Hero, some are null!
+    protected Hero[] heroes; // spaces for heroes, not every element is a Hero, some are null!
 
     public Location(String name) {
         this.name = name;
-        heros = new Hero[100]; // each location can host maximum a 100 heroes
+        heroes = new Hero[100]; // each location can host maximum a 100 heroes
     }
 
     public void addHero(Hero hero) {
@@ -23,9 +23,9 @@ public class Location {
     }
 
     private void addHeroOnEmptySpace(Hero hero) {
-        for (int i = 0; i < heros.length; i++) {
-            if (heros[i] == null) {
-                heros[i] = hero;
+        for (int i = 0; i < heroes.length; i++) {
+            if (heroes[i] == null) {
+                heroes[i] = hero;
                 return;
             }
         }
@@ -37,10 +37,10 @@ public class Location {
     }
 
     private void clearHeroSpace(Hero hero) {
-        for (int i = 0; i < heros.length; i++) {
-            Hero space = heros[i]; // space can be null, so check for null first
+        for (int i = 0; i < heroes.length; i++) {
+            Hero space = heroes[i]; // space can be null, so check for null first
             if (space != null && space.getName().equals(hero.getName())) { // checks for null first, if not null checks the name
-                heros[i] = null;
+                heroes[i] = null;
                 return;
             }
         }

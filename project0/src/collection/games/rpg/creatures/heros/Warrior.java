@@ -4,8 +4,8 @@ import collection.games.rpg.creatures.races.Race;
 
 public class Warrior extends Hero{
 
-    public Warrior(Race race, String name, int health, int strength, int intelligence, int agility) {
-        super(race, name, health, strength, intelligence, agility);
+    public Warrior(Race race, String name, int strength, int intelligence, int agility) {
+        super(race, name, strength, intelligence, agility);
     }
 
     @Override
@@ -13,4 +13,8 @@ public class Warrior extends Hero{
         return 50;
     }
 
+    @Override
+    public double getHealthCoefficient() {
+        return 1.5;
+    }
 }

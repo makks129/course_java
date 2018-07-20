@@ -6,4 +6,9 @@ public class Orc extends Race {
     public void sayHello() {
         System.out.println("Gramdashbur!");
     }
+
+    @Override
+    public double getHealthCoefficient() {
+        return 1.5;
+    }
 }

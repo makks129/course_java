@@ -13,14 +13,21 @@ public class Creature {
     protected int agility;
     protected Location currentLocation;
 
-    public Creature(String name, int health, int strength, int intelligence, int agility) {
+
+    protected Creature(String name, int strength, int intelligence, int agility) {
         this.name = name;
-        this.health = health;
         this.strength = strength;
         this.intelligence = intelligence;
         this.agility = agility;
         level = 1;
         experienceOnLevel = 0;
+        health = 1000;
+        double healthCoefficient = getHealthCoefficient();
+        health = (int) (health * healthCoefficient);
+    }
+
+    public double getHealthCoefficient() {
+        return -1;
     }
 
     public String getName() {

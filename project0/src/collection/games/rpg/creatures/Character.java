@@ -6,9 +6,12 @@ public class Character extends Creature {
 
     protected Race race;
 
-    public Character(Race race, String name, int health, int strength, int intelligence, int agility) {
-        super(name, health, strength, intelligence, agility);
+    protected Character(Race race, String name, int strength, int intelligence, int agility) {
+        super(name, strength, intelligence, agility);
         this.race = race;
+
+        double raceHealthCoefficient = race.getHealthCoefficient();
+        health = (int)(health * raceHealthCoefficient);
     }
 
 }

@@ -6,4 +6,8 @@ public class Race {
         // do nothing
     }
 
+    public double getHealthCoefficient() {
+        return -1;
+    }
+
 }

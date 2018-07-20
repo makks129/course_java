@@ -6,4 +6,10 @@ public class Human extends Race  {
     public void sayHello() {
         System.out.println("Hello, friend!");
     }
+
+
+    @Override
+    public double getHealthCoefficient() {
+        return 1.2;
+    }
 }

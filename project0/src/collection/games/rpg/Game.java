@@ -46,23 +46,22 @@ public class Game {
         cityMinasTirith = new City("Minas Tirith");
         cityMinasMorgul = new City("Minas Morgul");
 
-
         Monster[] minesOfIsengardMonsters = {
-                new Monster("Little angry monster", 100, 5, 1, 3),
-                new Monster("Little dirty monster", 100, 5, 1, 3),
-                new Monster("Little smelly monster", 100, 5, 1, 3),
-                new Monster("Big angry monster", 200, 10, 1, 6),
-                new Monster("Big dirty monster", 200, 10, 1, 6)
+                new Monster("Little angry monster",  5, 1, 3),
+                new Monster("Little dirty monster", 5, 1, 3),
+                new Monster("Little smelly monster",  5, 1, 3),
+                new Monster("Big angry monster",  10, 1, 6),
+                new Monster("Big dirty monster",  10, 1, 6)
         };
         Boss saruman = new Saruman();
         dungeonMinesOfIsengard = new Dungeon("Mines Of Isengard", minesOfIsengardMonsters, saruman);
 
         Monster[] minesOfMordorMonsters = {
-                new Monster("Little angry monster", 100, 5, 1, 3),
-                new Monster("Little dirty monster", 100, 5, 1, 3),
-                new Monster("Little smelly monster", 100, 5, 1, 3),
-                new Monster("Big angry monster", 200, 10, 1, 6),
-                new Monster("Big dirty monster", 200, 10, 1, 6)
+                new Monster("Little angry monster", 5, 1, 3),
+                new Monster("Little dirty monster",  5, 1, 3),
+                new Monster("Little smelly monster",  5, 1, 3),
+                new Monster("Big angry monster",  10, 1, 6),
+                new Monster("Big dirty monster",  10, 1, 6)
         };
         Boss sauron = new Sauron();
         dungeonMinesOfMordor = new Dungeon("Mines Of Mordor", minesOfMordorMonsters, sauron);
@@ -84,30 +83,40 @@ public class Game {
         Hero alexandruis = getHeroByName("Alexandruis");
         Hero maximus = getHeroByName("Maximus");
 
-        zoneEriador.addHero(stepanius);
-        zoneEriador.addHero(kostyanius);
-        zoneEriador.addHero(mariania);
-        zoneEriador.addHero(elenaria);
-        zoneEriador.addHero(alexandruis);
-        zoneEriador.addHero(maximus);
-
-        printAllPlayersLocations();
-
-        dungeonMinesOfIsengard.addHero(stepanius);
-        dungeonMinesOfIsengard.addHero(kostyanius);
-        dungeonMinesOfIsengard.addHero(mariania);
-        cityShire.addHero(elenaria);
-        cityShire.addHero(alexandruis);
-        cityShire.addHero(maximus);
-
-        printAllPlayersLocations();
+        printAllHeroesHealth();
 
 
+//        zoneEriador.addHero(stepanius);
+//        zoneEriador.addHero(kostyanius);
+//        zoneEriador.addHero(mariania);
+//        zoneEriador.addHero(elenaria);
+//        zoneEriador.addHero(alexandruis);
+//        zoneEriador.addHero(maximus);
+//
+//        printAllPlayersLocations();
+//
+//        dungeonMinesOfIsengard.addHero(stepanius);
+//        dungeonMinesOfIsengard.addHero(kostyanius);
+//        dungeonMinesOfIsengard.addHero(mariania);
+//        cityShire.addHero(elenaria);
+//        cityShire.addHero(alexandruis);
+//        cityShire.addHero(maximus);
+//
+//        printAllPlayersLocations();
+//
+//
 //        dungeonMinesOfIsengard.heroesStartFightingBoss();
 
 
         // TODO add game mechanics - attacking creatures!
 
+    }
+
+    private void printAllHeroesHealth() {
+        for (int i = 0; i < playersCount; i++) {
+            Hero hero = players[i].getHero();
+            System.out.println(hero.getName() + " has " + hero.getHealth() + " health");
+        }
     }
 
     private Hero getHeroByName(String name) {

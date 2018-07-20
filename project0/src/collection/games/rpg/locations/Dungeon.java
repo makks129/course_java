@@ -16,14 +16,14 @@ public class Dungeon extends Location {
     }
 
     public void heroesStartFightingBoss() {
-        for (int i = 0; i < heros.length; i++) {
-            Hero hero = heros[i];
+        for (int i = 0; i < heroes.length; i++) {
+            Hero hero = heroes[i];
             if (hero == null) {
                 continue; // if this space is not occupied by a hero (it is null), then run next loop cycle
             }
 
             // here hero is not null!
-            // TODO add check if all heros are alive or the group is defeated!
+            // TODO add check if all heroes are alive or the group is defeated!
 
             // if hero is alive he attacks
             if (hero.isAlive()) {

@@ -6,4 +6,9 @@ public class Elf extends Race  {
     public void sayHello() {
         System.out.println("Eldurian ta!");
     }
+
+    @Override
+    public double getHealthCoefficient() {
+        return 0.9;
+    }
 }
