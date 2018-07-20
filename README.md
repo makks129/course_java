@@ -10,6 +10,12 @@
   - Книга [Liang Y.D. - Introduction to Java programming](https://www.dropbox.com/s/2n590tuyfr9cdph/Liang_Y_D_-_Introduction_to_Java_Programming.pdf?dl=0)
 
 
+### Полезные ресурсы
+
+Обучающие онлайн игры по Java:
+  - [CodinGame](https://www.codingame.com/)
+  - [CodeWars](http://www.codewars.com/)
+
 
 ### Инструкции для установки Java и IDEA:
 
