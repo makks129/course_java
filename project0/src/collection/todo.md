@@ -1,3 +1,13 @@
+### RPG
+Create classes to simulate your favourite game (not necessarily RPG) entities and mechanics.
+Design notes:
+- think of the main entities that take part in the game
+- think about their properties and composition
+- figure out inheritance chains between them
+- think about their methods and how these entities interact
+- remember 5 class design principles!
+- don't be afraid to experiment 
+
 ### Social Network
 class User
 - saveNewProfile (сохранить новый профиль, например с измененной инфой)
