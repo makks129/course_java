@@ -10,20 +10,23 @@ public class Circle extends GeometricObject {
 
     private Circle() {
         numberOfCircles++;
-        System.out.println("Constructor in Circle()");
     }
 
     public Circle(double radius) {
         this();
-        this.radius = radius;
-        System.out.println("Constructor in Circle(double radius)");
+        setRadius(radius);
     }
 
     public Circle(double radius, double centerX, double centerY) {
         this(radius);
         this.centerX = centerX;
         this.centerY = centerY;
-        System.out.println("Constructor in Circle(double radius, double centerX, double centerY)");
+    }
+
+    public Circle(double radius, String color) {
+        super(color);
+        numberOfCircles++;
+        setRadius(radius);
     }
 
     public static int getNumberOfCircles() {
@@ -44,14 +47,13 @@ public class Circle extends GeometricObject {
         System.out.println("radius = " + radius + " color = " + color);
     }
 
-
     public double getRadius() {
         return radius;
     }
 
     public void setRadius(double radius) {
         if (radius < 0) {
-            radius = 0;
+            throw new GeometricException("Radius cannot be < 0");
         }
         this.radius = radius;
     }
@@ -70,6 +72,27 @@ public class Circle extends GeometricObject {
 
     public void setCenterY(double centerY) {
         this.centerY = centerY;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj instanceof Circle) {
+            Circle otherCircle = (Circle) obj;
+            return radius == otherCircle.getRadius()
+                    && color.equals(otherCircle.getColor())
+                    && centerX == otherCircle.centerX
+                    && centerY == otherCircle.centerY;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Circle of radius " + radius + ", color " + color + ", centerX " + centerX + ", centerY " + centerY;
     }
 
 }

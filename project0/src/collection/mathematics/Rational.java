@@ -9,6 +9,9 @@ public class Rational {
     private int denominator;
 
     public Rational(int numerator, int denominator) {
+        if (denominator == 0) {
+            throw new RuntimeException("Denominator cannot be 0");
+        }
         this.numerator = numerator;
         this.denominator = denominator;
     }
@@ -17,16 +20,8 @@ public class Rational {
         return numerator;
     }
 
-    public void setNumerator(int numerator) {
-        this.numerator = numerator;
-    }
-
     public int getDenominator() {
         return denominator;
-    }
-
-    public void setDenominator(int denominator) {
-        this.denominator = denominator;
     }
 
     public Rational add(Rational r) {

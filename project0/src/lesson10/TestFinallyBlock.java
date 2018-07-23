@@ -21,7 +21,7 @@ public class TestFinallyBlock {
         // 2. Catching exception
 //        throw new ArithmeticException();
         // 3. Not catching exception
-//        throw new RuntimeException();
+        throw new RuntimeException();
     }
 
 }

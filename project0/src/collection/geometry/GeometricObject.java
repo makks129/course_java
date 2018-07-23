@@ -9,9 +9,13 @@ public class GeometricObject {
     protected String color;
     protected long dateCreated;
 
-    public GeometricObject() {
+    protected GeometricObject() {
         dateCreated = System.currentTimeMillis();
-        System.out.println("Constructor in GeometricObject()");
+    }
+
+    protected GeometricObject(String color) {
+        this();
+        setColor(color);
     }
 
     public String getColor() {
@@ -19,6 +23,11 @@ public class GeometricObject {
     }
 
     public void setColor(String color) {
+        if (!color.equals(COLOR_RED)
+                && !color.equals(COLOR_GREEN)
+                && !color.equals(COLOR_BLUE)) {
+            throw new IllegalArgumentException("Color " + color + " is invalid.");
+        }
         this.color = color;
     }
 
