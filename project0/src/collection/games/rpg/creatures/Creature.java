@@ -2,8 +2,7 @@ package collection.games.rpg.creatures;
 
 import collection.games.rpg.locations.Location;
 
-// TODO Abs
-public class Creature {
+public abstract class Creature {
 
     protected String name;
     protected int level;
@@ -13,7 +12,6 @@ public class Creature {
     protected int intelligence;
     protected int agility;
     protected Location currentLocation;
-
 
     protected Creature(String name, int strength, int intelligence, int agility) {
         this.name = name;
@@ -27,9 +25,7 @@ public class Creature {
         health = (int) (health * healthCoefficient);
     }
 
-    public double getHealthCoefficient() {
-        return -1;
-    }
+    public abstract double getHealthCoefficient();
 
     public String getName() {
         return name;
@@ -47,9 +43,7 @@ public class Creature {
         return health;
     }
 
-    public int attack() {
-        return 0;
-    }
+    public abstract int attack();
 
     public void takeAttack(int attack) {
         health -= attack;

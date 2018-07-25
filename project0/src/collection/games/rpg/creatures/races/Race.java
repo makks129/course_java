@@ -1,14 +1,9 @@
 package collection.games.rpg.creatures.races;
 
-// TODO Abs
-public class Race {
+public abstract class Race {
 
-    public void sayHello() {
-        // do nothing
-    }
+    public abstract void sayHello();
 
-    public double getHealthCoefficient() {
-        return -1;
-    }
+    public abstract double getHealthCoefficient();
 
 }

@@ -5,6 +5,7 @@ import collection.games.rpg.creatures.mosters.Boss;
 import collection.games.rpg.creatures.mosters.Monster;
 import collection.games.rpg.creatures.mosters.Saruman;
 import collection.games.rpg.creatures.mosters.Sauron;
+import collection.games.rpg.items.Item;
 import collection.games.rpg.locations.City;
 import collection.games.rpg.locations.Dungeon;
 import collection.games.rpg.locations.Zone;

@@ -2,10 +2,9 @@ package collection.games.rpg.creatures;
 
 import collection.games.rpg.creatures.races.Race;
 
-// TODO Abs
-public class Character extends Creature {
+public abstract class Character extends Creature {
 
-    protected Race race;
+    private Race race;
 
     protected Character(Race race, String name, int strength, int intelligence, int agility) {
         super(name, strength, intelligence, agility);
@@ -13,6 +12,10 @@ public class Character extends Creature {
 
         double raceHealthCoefficient = race.getHealthCoefficient();
         health = (int)(health * raceHealthCoefficient);
+    }
+
+    public Race getRace() {
+        return race;
     }
 
 }

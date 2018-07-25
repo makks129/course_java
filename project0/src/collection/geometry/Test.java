@@ -13,16 +13,23 @@ public class Test {
 
 
 
-        try {
-//            Circle c1 = new Circle(-1, "red");
-            Circle c2 = new Circle(10, "blabla");
-        } catch (GeometricException e) {
-            e.printStackTrace();
-        } catch (IllegalArgumentException e) {
-            e.printStackTrace();
-        }
-        System.out.println();
+//        try {
+////            Circle c1 = new Circle(-1, "red");
+//            Circle c2 = new Circle(10, "blabla");
+//        } catch (GeometricException e) {
+//            e.printStackTrace();
+//        } catch (IllegalArgumentException e) {
+//            e.printStackTrace();
+//        }
+//        System.out.println();
 
+
+
+        Circle c1 = new Circle(10);
+        Circle c2 = new Circle(20);
+
+        int compareResult = c1.compareTo(c2);
+        System.out.println(compareResult);
 
 
     }

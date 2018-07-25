@@ -1,6 +1,6 @@
 package collection.geometry;
 
-public class Circle extends GeometricObject {
+public class Circle extends GeometricObject implements Comparable<Circle>, Cloneable {
 
     public double radius;
     private double centerX;
@@ -33,7 +33,7 @@ public class Circle extends GeometricObject {
         return numberOfCircles;
     }
 
-    @Override
+
     public double getArea() {
         return radius * radius * Math.PI;
     }
@@ -95,4 +95,14 @@ public class Circle extends GeometricObject {
         return "Circle of radius " + radius + ", color " + color + ", centerX " + centerX + ", centerY " + centerY;
     }
 
+    @Override
+    public int compareTo(Circle other) {
+        if (radius > other.radius) {
+            return 1;
+        } else if (radius < other.radius) {
+            return -1;
+        } else {
+            return 0;
+        }
+    }
 }

@@ -1,6 +1,6 @@
 package collection.geometry;
 
-public class GeometricObject {
+public abstract class GeometricObject {
 
     public static final String COLOR_RED = "red";
     public static final String COLOR_GREEN = "green";
@@ -35,12 +35,8 @@ public class GeometricObject {
         return dateCreated;
     }
 
-    public double getArea() {
-        return 0;
-    }
+    public abstract double getArea();
 
-    public double getPerimeter() {
-        return 0;
-    }
+    public abstract double getPerimeter();
 
 }

@@ -7,6 +7,11 @@ public class Sauron extends Boss {
     }
 
     @Override
+    public double getHealthCoefficient() {
+        return 100;
+    }
+
+    @Override
     public int attack() {
         return 500;
     }

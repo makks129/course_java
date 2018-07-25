@@ -2,9 +2,8 @@ package collection.games.rpg.locations;
 
 import collection.games.rpg.creatures.heros.Hero;
 
-// TODO Abs
 // TODO player enter/exit announcement
-public class Location {
+public abstract class Location {
 
     protected String name;
     protected Hero[] heroes; // spaces for heroes, not every element is a Hero, some are null!
@@ -19,10 +18,15 @@ public class Location {
         if (currentLocation != null) {
             currentLocation.removeHero(hero);
         }
-
         addHeroOnEmptySpace(hero);
         hero.setCurrentLocation(this);
+
+//        announceHeroEnterLocation(hero);
     }
+
+//    protected abstract void announceHeroEnterLocation(Hero hero);
+
+//    protected abstract void announceHeroExitLocation(Hero hero);
 
     private void addHeroOnEmptySpace(Hero hero) {
         for (int i = 0; i < heroes.length; i++) {

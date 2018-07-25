@@ -7,6 +7,11 @@ public class Saruman extends Boss {
     }
 
     @Override
+    public double getHealthCoefficient() {
+        return 50;
+    }
+
+    @Override
     public int attack() {
         return 300;
     }

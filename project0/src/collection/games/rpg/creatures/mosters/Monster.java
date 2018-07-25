@@ -6,6 +6,16 @@ public class Monster extends Creature {
 
     public Monster(String name, int strength, int intelligence, int agility) {
         super(name,  strength, intelligence, agility);
-        health = 200;
     }
+
+    @Override
+    public double getHealthCoefficient() {
+        return 0.2;
+    }
+
+    @Override
+    public int attack() {
+        return 50;
+    }
+
 }
