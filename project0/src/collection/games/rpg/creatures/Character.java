@@ -2,6 +2,7 @@ package collection.games.rpg.creatures;
 
 import collection.games.rpg.creatures.races.Race;
 
+// TODO Abs
 public class Character extends Creature {
 
     protected Race race;

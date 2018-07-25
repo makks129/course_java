@@ -2,6 +2,7 @@ package collection.games.rpg.creatures;
 
 import collection.games.rpg.locations.Location;
 
+// TODO Abs
 public class Creature {
 
     protected String name;

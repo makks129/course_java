@@ -65,8 +65,6 @@ public class Game {
         };
         Boss sauron = new Sauron();
         dungeonMinesOfMordor = new Dungeon("Mines Of Mordor", minesOfMordorMonsters, sauron);
-
-        // TODO can directly create Location object - disable!
     }
 
     public void addPlayer(Player player) {

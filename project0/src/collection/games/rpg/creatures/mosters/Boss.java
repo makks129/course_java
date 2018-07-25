@@ -1,5 +1,7 @@
 package collection.games.rpg.creatures.mosters;
 
+// TODO Abs
+// TODO create SimpleBoss
 public class Boss extends Monster {
 
     public Boss(String name, int strength, int intelligence, int agility) {

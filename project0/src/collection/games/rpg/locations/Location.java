@@ -2,6 +2,8 @@ package collection.games.rpg.locations;
 
 import collection.games.rpg.creatures.heros.Hero;
 
+// TODO Abs
+// TODO player enter/exit announcement
 public class Location {
 
     protected String name;
