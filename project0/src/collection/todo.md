@@ -8,6 +8,12 @@ Design notes:
 - remember 5 class design principles!
 - don't be afraid to experiment 
 
+Interfaces to implement:
+Lootable (То, с чего возможо получить добычу)
+Consumable (То, что можно употребить)
+Targetable (То, что можно выделить и взаимодействовать с)
+InventoryItem (Предмет, который можно положить в инвентарь)
+
 ### Social Network
 class User
 - saveNewProfile (сохранить новый профиль, например с измененной инфой)
