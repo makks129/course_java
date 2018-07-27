@@ -1,6 +1,6 @@
 package collection.geometry;
 
-public class Rectangle extends GeometricObject {
+public class Rectangle extends GeometricObject implements MyComparable {
 
     private static int numberOfRectangles;
 
@@ -37,5 +37,20 @@ public class Rectangle extends GeometricObject {
 
     public static int getNumberOfRectangles() {
         return numberOfRectangles;
+    }
+
+    @Override
+    public int compareTo(Object other) {
+        if (other instanceof Rectangle) {
+            Rectangle otherRectangle = (Rectangle) other;
+            if (getArea() > otherRectangle.getArea()) {
+                return 1;
+            } else if (getArea() < otherRectangle.getArea()) {
+                return -1;
+            } else {
+                return 0;
+            }
+        }
+        throw new RuntimeException("other is not a Rectangle");
     }
 }

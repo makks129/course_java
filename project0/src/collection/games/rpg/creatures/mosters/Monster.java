@@ -7,7 +7,7 @@ import collection.games.rpg.interfaces.Targetable;
 
 public class Monster extends Creature implements Targetable, InventoryItem {
 
-    private Reputation reputation;
+    protected Reputation reputation;
 
     public Monster(String name, int strength, int intelligence, int agility) {
         super(name, strength, intelligence, agility);

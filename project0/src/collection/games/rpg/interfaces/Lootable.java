@@ -1,11 +1,11 @@
 package collection.games.rpg.interfaces;
 
-import collection.games.rpg.items.Money;
+import collection.games.rpg.creatures.heros.Hero;
 
 public interface Lootable {
 
-    InventoryItem[] lootItems();
+    void lootItems(Hero hero);
 
-    Money lootMoney();
+    void lootMoney(Hero hero);
 
 }

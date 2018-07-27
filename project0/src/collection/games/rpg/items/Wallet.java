@@ -5,7 +5,7 @@ public class Wallet {
     private Money money;
 
     public Wallet() {
-        money = new Money(0, 0, 0);
+        money = Money.ZERO;
     }
 
     public Money getMoney() {
@@ -15,4 +15,9 @@ public class Wallet {
     public void setMoney(Money money) {
         this.money = money;
     }
+
+    public void addMoney(Money money) {
+        this.money = this.money.add(money);
+    }
+
 }

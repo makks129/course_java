@@ -1,5 +1,7 @@
 package collection.geometry;
 
+import java.util.Comparator;
+
 public class Test {
 
     public static void main(String[] args) {
@@ -24,13 +26,25 @@ public class Test {
 //        System.out.println();
 
 
+//
+//        Circle c1 = new Circle(10);
+//        Circle c2 = new Circle(20);
+//
+//        int compareResult = c1.compareTo(c2);
+//        System.out.println(compareResult);
 
-        Circle c1 = new Circle(10);
-        Circle c2 = new Circle(20);
+        Rectangle r1 = new Rectangle(10, 10);
+        Rectangle r2 = new Rectangle(10, 20);
+        Rectangle r3 = new Rectangle(20, 10);
+        Rectangle r4 = new Rectangle(20, 20);
 
-        int compareResult = c1.compareTo(c2);
-        System.out.println(compareResult);
+        int comparableResult = r1.compareTo(r2);
 
+        RectangleHeightComparator heightComparator = new RectangleHeightComparator();
+        int comparatorResult = heightComparator.compare(r1, r2);
+
+        System.out.println(comparableResult);
+        System.out.println(comparatorResult);
 
     }
 

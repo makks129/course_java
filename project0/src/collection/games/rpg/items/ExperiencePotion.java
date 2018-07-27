@@ -3,7 +3,7 @@ package collection.games.rpg.items;
 import collection.games.rpg.creatures.heros.Hero;
 import collection.games.rpg.interfaces.Consumable;
 
-public class ExperiencePotion extends Potion implements Consumable {
+public class ExperiencePotion extends Potion {
 
     private int xpAmount;
 
@@ -15,12 +15,6 @@ public class ExperiencePotion extends Potion implements Consumable {
     @Override
     protected void affect(Hero hero) {
         hero.getExperience().gainExperience(xpAmount);
-    }
-
-    @Override
-    public String consume(Hero hero) {
-        affect(hero);
-        return "Hero " + hero.getName() + " has used the potion " + name;
     }
 
 }

@@ -1,7 +1,9 @@
 package collection.games.rpg.objects;
 
+import collection.games.rpg.creatures.heros.Hero;
 import collection.games.rpg.interfaces.InventoryItem;
 import collection.games.rpg.interfaces.Lootable;
+import collection.games.rpg.items.Inventory;
 import collection.games.rpg.items.Item;
 import collection.games.rpg.items.Money;
 
@@ -11,22 +13,24 @@ public abstract class Container extends GameWorldObject implements Lootable {
     private Money money;
 
     public Container() {
-        items = new Item[100]; // can contain max 100 items
+        items = new InventoryItem[100]; // can contain max 100 items
         money = Money.ZERO;
     }
 
     @Override
-    public InventoryItem[] lootItems() {
+    public void lootItems(Hero hero) {
         InventoryItem[] itemsToLoot = items;
-        items = null;
-        return itemsToLoot;
+        items = new InventoryItem[100];
+        for (int i = 0; i < itemsToLoot.length; i++) {
+            hero.getInventory().addItem(itemsToLoot[i]);
+        }
     }
 
     @Override
-    public Money lootMoney() {
+    public void lootMoney(Hero hero) {
         Money moneyToLoot = money;
         money = Money.ZERO;
-        return moneyToLoot;
+        hero.getWallet().addMoney(moneyToLoot);
     }
 
     public InventoryItem[] getItems() {

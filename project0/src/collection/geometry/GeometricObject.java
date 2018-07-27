@@ -2,32 +2,23 @@ package collection.geometry;
 
 public abstract class GeometricObject {
 
-    public static final String COLOR_RED = "red";
-    public static final String COLOR_GREEN = "green";
-    public static final String COLOR_BLUE = "blue";
-
-    protected String color;
+    protected Color color;
     protected long dateCreated;
 
     protected GeometricObject() {
         dateCreated = System.currentTimeMillis();
     }
 
-    protected GeometricObject(String color) {
+    protected GeometricObject(Color color) {
         this();
         setColor(color);
     }
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
-    public void setColor(String color) {
-        if (!color.equals(COLOR_RED)
-                && !color.equals(COLOR_GREEN)
-                && !color.equals(COLOR_BLUE)) {
-            throw new IllegalArgumentException("Color " + color + " is invalid.");
-        }
+    public void setColor(Color color) {
         this.color = color;
     }
 

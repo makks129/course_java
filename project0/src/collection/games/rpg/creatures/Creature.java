@@ -1,5 +1,6 @@
 package collection.games.rpg.creatures;
 
+import collection.games.rpg.creatures.heros.Hero;
 import collection.games.rpg.interfaces.InventoryItem;
 import collection.games.rpg.interfaces.Lootable;
 import collection.games.rpg.items.Inventory;
@@ -30,23 +31,23 @@ public abstract class Creature implements Lootable {
     }
 
     @Override
-    public InventoryItem[] lootItems() {
+    public void lootItems(Hero hero) {
         if (hp.isDead()) {
             InventoryItem[] itemsToLoot = inventory.getItems();
             inventory = new Inventory();
-            return itemsToLoot;
+            for (int i = 0; i < itemsToLoot.length; i++) {
+                hero.getInventory().addItem(itemsToLoot[i]);
+            }
         }
-        return null;
     }
 
     @Override
-    public Money lootMoney() {
+    public void lootMoney(Hero hero) {
         if (hp.isDead()) {
             Money moneyToLoot = wallet.getMoney();
             wallet.setMoney(Money.ZERO);
-            return moneyToLoot;
+            hero.getWallet().addMoney(moneyToLoot);
         }
-        return null;
     }
 
     public abstract double getHealthCoefficient();
@@ -87,5 +88,13 @@ public abstract class Creature implements Lootable {
 
     public void setCurrentLocation(Location currentLocation) {
         this.currentLocation = currentLocation;
+    }
+
+    public Inventory getInventory() {
+        return inventory;
+    }
+
+    public Wallet getWallet() {
+        return wallet;
     }
 }

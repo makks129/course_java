@@ -15,7 +15,7 @@ public class Book extends Container implements Targetable, Consumable, Inventory
 
     @Override
     public String[] actionsOnTarget() {
-        return new String[]{"Take"};
+        return new String[]{"Put into inventory"};
     }
 
     @Override

@@ -23,7 +23,7 @@ public class Circle extends GeometricObject implements Comparable<Circle>, Clone
         this.centerY = centerY;
     }
 
-    public Circle(double radius, String color) {
+    public Circle(double radius, Color color) {
         super(color);
         numberOfCircles++;
         setRadius(radius);

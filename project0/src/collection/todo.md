@@ -111,18 +111,18 @@ etc.
 ### Containers
 - class Stack
     * LIFO container
-    * data is stored in an array
+    * data is stored in an array of Objects
     * methods: putItem, takeTopItem, seeTopItem, size, isEmpty
     * make array expand and shrink if needed (see methods to expand an array and to remove null values from an array)
 - class Queue
     * FIFO container
-    * data is stored in an array
+    * data is stored in an array of Objects
     * methods: putItem, removeItem, seeFirstItem, seeLastItem, size, isEmpty
     * don't forget to shift an array when you remove items from it
     * make array expand and shrink if needed (see methods to expand an array and to remove null values from an array)
 - class List
     * random access container
-    * data is stored in an array
+    * data is stored in an array of Objects
     * methods: addItem, getItem(index), size, isEmpty
     * make array expand and shrink if needed (see methods to expand an array and to remove null values from an array)
 - class Range
