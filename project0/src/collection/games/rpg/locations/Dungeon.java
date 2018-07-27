@@ -26,17 +26,17 @@ public class Dungeon extends Location {
             // TODO add check if all heroes are alive or the group is defeated!
 
             // if hero is alive he attacks
-            if (hero.isAlive()) {
+            if (hero.getHealth().isAlive()) {
                 int heroAttack = hero.attack();
-                boss.takeAttack(heroAttack);
+                boss.getHealth().takeDamage(heroAttack);
             } else {
                 System.out.println("Hero " + hero.getName() + " is defeated!");
             }
 
             // if boss is alive he attacks
-            if (boss.isAlive()) {
+            if (boss.getHealth().isAlive()) {
                 int bossAttack = boss.attack();
-                hero.takeAttack(bossAttack);
+                hero.getHealth().takeDamage(bossAttack);
             } else {
                 System.out.println(boss.getName() + " is defeated!");
                 return;

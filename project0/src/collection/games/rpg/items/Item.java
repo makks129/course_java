@@ -1,14 +1,30 @@
 package collection.games.rpg.items;
 
-public abstract class Item {
+import collection.games.rpg.interfaces.InventoryItem;
 
-    protected long id;
+import java.util.UUID;
 
-    public long getId() {
+public abstract class Item implements InventoryItem {
+
+    protected UUID id;
+    protected String name;
+
+    public Item(String name) {
+        this.id = UUID.randomUUID();
+        this.name = name;
+    }
+
+    public UUID getId() {
         return id;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public String getName() {
+        return name;
     }
+
+    @Override
+    public boolean canPutIntoInventory() {
+        return true;
+    }
+
 }

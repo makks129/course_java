@@ -13,4 +13,9 @@ public class Guard extends Npc {
         return 100;
     }
 
+    @Override
+    public String[] actionsOnTarget() {
+        return new String[]{"Greet", "Attack"};
+    }
+
 }

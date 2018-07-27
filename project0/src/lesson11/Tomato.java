@@ -1,4 +1,4 @@
-package lesson11.edibles;
+package lesson11;
 
 public class Tomato implements Edible {
 

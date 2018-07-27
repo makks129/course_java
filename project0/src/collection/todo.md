@@ -130,3 +130,11 @@ etc.
     * only stores first and last element (both inclusive), for example range of (1, 10) stores only 1 and 10 in its fields
     * range must always go up (must be 1 to 10, cannot be 10 to 1)
     * methods: sum ranges, check if two ranges intersect
+- class CollectionsPerformanceTester
+    * класс в который можно передать разные коллекции из созданных самостоятельно или из JCF
+    * класс должен иметь методы для проверки производительности коллекций
+    * такие методы должны получать на входе количество элементов для наполнения коллекции и использовать методы shuffle или sort
+    * время операции должно засекаться и выводиться в консоль по окончании
+    * для подсказки выполнения задания см. стр745 учебника
+- JCF
+    * Переписать перечисленные здесь задания с использованием классов JCF там, где это удобно

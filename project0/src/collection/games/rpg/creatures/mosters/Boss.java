@@ -10,4 +10,9 @@ public abstract class Boss extends Monster {
     public double getHealthCoefficient() {
         return 10;
     }
+
+    @Override
+    public boolean canPutIntoInventory() {
+        return false;
+    }
 }

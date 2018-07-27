@@ -15,11 +15,11 @@ public class Main {
         Game game = new Game();
 
         Player stepa = new Player(new Ranger(new Elf(), "Stepanius", 30, 10, 20));
-        Player kostya = new Player(new Mage(new Human(), "Kostyanius",  30, 10, 20));
-        Player masha = new Player(new Ranger(new Orc(), "Mariania",  30, 10, 20));
+        Player kostya = new Player(new Mage(new Human(), "Kostyanius", 30, 10, 20));
+        Player masha = new Player(new Ranger(new Orc(), "Mariania", 30, 10, 20));
         Player lena = new Player(new Priest(new Elf(), "Elenaria", 30, 10, 20));
-        Player sasha = new Player(new Priest(new Human(), "Alexandruis",  30, 10, 20));
-        Player max = new Player(new Warrior(new Orc(), "Maximus",  30, 10, 20));
+        Player sasha = new Player(new Priest(new Human(), "Alexandruis", 30, 10, 20));
+        Player max = new Player(new Warrior(new Orc(), "Maximus", 30, 10, 20));
 
         game.addPlayer(stepa);
         game.addPlayer(kostya);

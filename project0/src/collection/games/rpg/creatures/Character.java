@@ -9,9 +9,7 @@ public abstract class Character extends Creature {
     protected Character(Race race, String name, int strength, int intelligence, int agility) {
         super(name, strength, intelligence, agility);
         this.race = race;
-
-        double raceHealthCoefficient = race.getHealthCoefficient();
-        health = (int)(health * raceHealthCoefficient);
+        getHealth().increaseMaxHealthByCoefficient(race.getHealthCoefficient());
     }
 
     public Race getRace() {

@@ -1,56 +1,68 @@
 package collection.games.rpg.creatures;
 
+import collection.games.rpg.interfaces.InventoryItem;
+import collection.games.rpg.interfaces.Lootable;
+import collection.games.rpg.items.Inventory;
+import collection.games.rpg.items.Item;
+import collection.games.rpg.items.Money;
+import collection.games.rpg.items.Wallet;
 import collection.games.rpg.locations.Location;
 
-public abstract class Creature {
+public abstract class Creature implements Lootable {
 
     protected String name;
-    protected int level;
-    protected int experienceOnLevel;
-    protected int health;
+    protected final Health hp;
+    protected final Experience xp;
     protected int strength;
     protected int intelligence;
     protected int agility;
     protected Location currentLocation;
+    protected Inventory inventory;
+    protected Wallet wallet;
 
     protected Creature(String name, int strength, int intelligence, int agility) {
         this.name = name;
         this.strength = strength;
         this.intelligence = intelligence;
         this.agility = agility;
-        level = 1;
-        experienceOnLevel = 0;
-        health = 1000;
-        double healthCoefficient = getHealthCoefficient();
-        health = (int) (health * healthCoefficient);
+        xp = new Experience(this);
+        hp = new Health(getHealthCoefficient());
+    }
+
+    @Override
+    public InventoryItem[] lootItems() {
+        if (hp.isDead()) {
+            InventoryItem[] itemsToLoot = inventory.getItems();
+            inventory = new Inventory();
+            return itemsToLoot;
+        }
+        return null;
+    }
+
+    @Override
+    public Money lootMoney() {
+        if (hp.isDead()) {
+            Money moneyToLoot = wallet.getMoney();
+            wallet.setMoney(Money.ZERO);
+            return moneyToLoot;
+        }
+        return null;
     }
 
     public abstract double getHealthCoefficient();
+
+    public abstract int attack();
 
     public String getName() {
         return name;
     }
 
-    public int getLevel() {
-        return level;
+    public Experience getExperience() {
+        return xp;
     }
 
-    public int getExperienceOnLevel() {
-        return experienceOnLevel;
-    }
-
-    public int getHealth() {
-        return health;
-    }
-
-    public abstract int attack();
-
-    public void takeAttack(int attack) {
-        health -= attack;
-    }
-
-    public boolean isAlive() {
-        return health > 0;
+    public Health getHealth() {
+        return hp;
     }
 
     public int getStrength() {
