@@ -20,4 +20,7 @@ public class User {
         feed = new Feed();
     }
 
+    public UserProfile getProfile() {
+        return profile;
+    }
 }

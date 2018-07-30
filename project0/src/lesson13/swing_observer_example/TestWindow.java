@@ -17,6 +17,7 @@ public class TestWindow extends JFrame {
                 System.out.println("Button clicked");
             }
         });
+
         JPanel panel = new JPanel();
         panel.add(button);
         this.getContentPane().add(panel);

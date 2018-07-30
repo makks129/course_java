@@ -30,17 +30,26 @@ public class TestSets {
         linkedHashSet.add("Moscow");
         System.out.println(linkedHashSet);
 
-        Set<String> treeSet = new TreeSet<>();
-        treeSet.add("Moscow");
-        treeSet.add("Piter");
-        treeSet.add("London");
-        treeSet.add("Paris");
-        treeSet.add("Moscow");
+
+
+        Set<String> treeSet = new TreeSet<>(new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                if (o1.length() > o2.length()) {
+                    return 1;
+                } else if (o1.length() < o2.length()) {
+                    return -1;
+                } else {
+                    return 0;
+                }
+            }
+        });
+        treeSet.add("aaaaa");
+        treeSet.add("a");
+        treeSet.add("aaa");
         System.out.println(treeSet);
 
-        Map<String, String> map = new HashMap<>();
-        map.put("Russia", "Moscow");
-        map.put("Russia", "Piter");
+
 
 
     }

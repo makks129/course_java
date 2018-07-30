@@ -7,6 +7,7 @@ public class OuterClass {
 
     public OuterClass() {
         innerClass = new InnerClass();
+        innerClass.innerClassMethod();
     }
 
     private void outerClassMethod() {
@@ -30,6 +31,5 @@ public class OuterClass {
     public interface InnerInterface {
         void method();
     }
-
 
 }

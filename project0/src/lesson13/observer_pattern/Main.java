@@ -6,7 +6,7 @@ public class Main {
 
 
         Button button = new Button();
-        Screen screen = new Screen();
+        Screen screen = new Screen(button);
 
 
 
