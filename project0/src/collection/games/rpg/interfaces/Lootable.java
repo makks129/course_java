@@ -4,8 +4,8 @@ import collection.games.rpg.creatures.heros.Hero;
 
 public interface Lootable {
 
-    void lootItems(Hero hero);
+    void lootItems(Hero toHero);
 
-    void lootMoney(Hero hero);
+    void lootMoney(Hero toHero);
 
 }

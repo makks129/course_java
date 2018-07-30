@@ -2,54 +2,40 @@ package collection.games.rpg.locations;
 
 import collection.games.rpg.creatures.heros.Hero;
 
+import java.util.LinkedList;
+import java.util.List;
+
 // TODO player enter/exit announcement
 public abstract class Location {
 
     protected String name;
-    protected Hero[] heroes; // spaces for heroes, not every element is a Hero, some are null!
+    protected List<Hero> heroes; // spaces for heroes, not every element is a Hero, some are null!
 
     public Location(String name) {
         this.name = name;
-        heroes = new Hero[100]; // each location can host maximum a 100 heroes
-    }
-
-    public void addHero(Hero hero) {
-        Location currentLocation = hero.getCurrentLocation();
-        if (currentLocation != null) {
-            currentLocation.removeHero(hero);
-        }
-        addHeroOnEmptySpace(hero);
-        hero.setCurrentLocation(this);
-
-//        announceHeroEnterLocation(hero);
+        heroes = new LinkedList<>(); // each location can host maximum a 100 heroes
     }
 
 //    protected abstract void announceHeroEnterLocation(Hero hero);
 
 //    protected abstract void announceHeroExitLocation(Hero hero);
 
-    private void addHeroOnEmptySpace(Hero hero) {
-        for (int i = 0; i < heroes.length; i++) {
-            if (heroes[i] == null) {
-                heroes[i] = hero;
-                return;
-            }
+    public void changeLocation(Hero hero) {
+        Location currentLocation = hero.getCurrentLocation();
+        if (currentLocation != null) {
+            currentLocation.removeHero(hero);
         }
+        addHero(hero);
+    }
+
+    private void addHero(Hero hero) {
+        heroes.add(hero);
+        hero.setCurrentLocation(this);
     }
 
     private void removeHero(Hero hero) {
-        clearHeroSpace(hero);
+        heroes.remove(hero);
         hero.setCurrentLocation(null);
-    }
-
-    private void clearHeroSpace(Hero hero) {
-        for (int i = 0; i < heroes.length; i++) {
-            Hero space = heroes[i]; // space can be null, so check for null first
-            if (space != null && space.getName().equals(hero.getName())) { // checks for null first, if not null checks the name
-                heroes[i] = null;
-                return;
-            }
-        }
     }
 
     public String getName() {

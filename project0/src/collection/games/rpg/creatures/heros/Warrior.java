@@ -10,7 +10,7 @@ public class Warrior extends Hero {
 
     @Override
     public int attack() {
-        return 50;
+        return 200;
     }
 
     @Override

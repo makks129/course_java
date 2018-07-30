@@ -8,6 +8,8 @@ public class Test {
 
         int randomNumber = smartScanner.requestInt("Enter random number between 0 and 10: ");
 
+
     }
+
 
 }

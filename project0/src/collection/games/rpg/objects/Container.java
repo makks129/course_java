@@ -7,37 +7,36 @@ import collection.games.rpg.items.Inventory;
 import collection.games.rpg.items.Item;
 import collection.games.rpg.items.Money;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class Container extends GameWorldObject implements Lootable {
 
-    private InventoryItem[] items;
+    private List<InventoryItem> items;
     private Money money;
 
     public Container() {
-        items = new InventoryItem[100]; // can contain max 100 items
+        items = new ArrayList<>();
         money = Money.ZERO;
     }
 
     @Override
-    public void lootItems(Hero hero) {
-        InventoryItem[] itemsToLoot = items;
-        items = new InventoryItem[100];
-        for (int i = 0; i < itemsToLoot.length; i++) {
-            hero.getInventory().addItem(itemsToLoot[i]);
-        }
+    public void lootItems(Hero toHero) {
+        toHero.getInventory().getItems().addAll(items);
+        items.clear();
     }
 
     @Override
-    public void lootMoney(Hero hero) {
-        Money moneyToLoot = money;
+    public void lootMoney(Hero toHero) {
+        toHero.getWallet().addMoney(money);
         money = Money.ZERO;
-        hero.getWallet().addMoney(moneyToLoot);
     }
 
-    public InventoryItem[] getItems() {
+    public List<InventoryItem> getItems() {
         return items;
     }
 
-    public void setItems(Item[] items) {
+    public void setItems(List<InventoryItem> items) {
         this.items = items;
     }
 

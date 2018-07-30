@@ -2,19 +2,22 @@ package collection.games.rpg.items;
 
 import collection.games.rpg.interfaces.InventoryItem;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Inventory {
 
-    private InventoryItem[] items;
-    private int itemsCount;
+    private List<InventoryItem> items;
 
     public Inventory() {
+        items = new ArrayList<>();
     }
 
-    public InventoryItem[] getItems() {
+    public List<InventoryItem> getItems() {
         return items;
     }
 
-    public void addItem(InventoryItem item) {
-        items[itemsCount++] = item;
+    public void setItems(List<InventoryItem> items) {
+        this.items = items;
     }
 }

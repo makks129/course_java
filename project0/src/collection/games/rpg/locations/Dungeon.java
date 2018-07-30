@@ -4,20 +4,22 @@ import collection.games.rpg.creatures.heros.Hero;
 import collection.games.rpg.creatures.mosters.Boss;
 import collection.games.rpg.creatures.mosters.Monster;
 
+import java.util.List;
+
 public class Dungeon extends Location {
 
-    protected Monster[] monsters;
+    protected List<Monster> monsters;
     protected Boss boss;
 
-    public Dungeon(String name, Monster[] monsters, Boss boss) {
+    public Dungeon(String name, List<Monster> monsters, Boss boss) {
         super(name);
         this.monsters = monsters;
         this.boss = boss;
     }
 
     public void heroesStartFightingBoss() {
-        for (int i = 0; i < heroes.length; i++) {
-            Hero hero = heroes[i];
+        for (int i = 0; i < heroes.size(); i++) {
+            Hero hero = heroes.get(i);
             if (hero == null) {
                 continue; // if this space is not occupied by a hero (it is null), then run next loop cycle
             }

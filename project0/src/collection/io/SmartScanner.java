@@ -13,7 +13,9 @@ public class SmartScanner {
 
     public int requestInt(String message) {
         while (true) {
-            System.out.println(message);
+            if (message != null) {
+                System.out.println(message);
+            }
             try {
                 return scanner.nextInt();
             } catch (InputMismatchException ex) {

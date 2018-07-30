@@ -9,10 +9,16 @@ Design notes:
 - don't be afraid to experiment 
 
 Interfaces to implement:
-Lootable (То, с чего возможо получить добычу)
-Consumable (То, что можно употребить)
-Targetable (То, что можно выделить и взаимодействовать с)
-InventoryItem (Предмет, который можно положить в инвентарь)
+- Lootable (То, с чего возможо получить добычу)
+- Consumable (То, что можно употребить)
+- Targetable (То, что можно выделить и взаимодействовать с)
+- InventoryItem (Предмет, который можно положить в инвентарь)
+
+TODO:
+- Add healing action to duels
+- Add critical damage chance to attacks (different chance depending on hero type or even on hero items!)
+- Change duel logic so that heroes can block/attack different body parts
+- Change attack values for different heroes
 
 ### Social Network
 class User

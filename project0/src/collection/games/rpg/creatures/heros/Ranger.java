@@ -10,7 +10,7 @@ public class Ranger extends Hero{
 
     @Override
     public int attack() {
-        return 30;
+        return 200;
     }
 
     @Override

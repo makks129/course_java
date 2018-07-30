@@ -39,6 +39,10 @@ public class Health {
         }
     }
 
+    public void healToMaximum() {
+        currentHealth = maxHealth;
+    }
+
     public boolean isAlive() {
         return currentHealth > 0;
     }
@@ -47,4 +51,8 @@ public class Health {
         return !isAlive();
     }
 
+    @Override
+    public String toString() {
+        return currentHealth + "/" + maxHealth;
+    }
 }

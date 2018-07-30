@@ -10,7 +10,7 @@ public class Mage extends Hero {
 
     @Override
     public int attack() {
-        return 40;
+        return 200;
     }
 
     @Override

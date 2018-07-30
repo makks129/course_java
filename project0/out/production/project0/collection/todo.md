@@ -9,10 +9,16 @@ Design notes:
 - don't be afraid to experiment 
 
 Interfaces to implement:
-Lootable (То, с чего возможо получить добычу)
-Consumable (То, что можно употребить)
-Targetable (То, что можно выделить и взаимодействовать с)
-InventoryItem (Предмет, который можно положить в инвентарь)
+- Lootable (То, с чего возможо получить добычу)
+- Consumable (То, что можно употребить)
+- Targetable (То, что можно выделить и взаимодействовать с)
+- InventoryItem (Предмет, который можно положить в инвентарь)
+
+TODO:
+- Add healing action to duels
+- Add critical damage chance to attacks (different chance depending on hero type or even on hero items!)
+- Change duel logic so that heroes can block/attack different body parts
+- Change attack values for different heroes
 
 ### Social Network
 class User
@@ -111,18 +117,18 @@ etc.
 ### Containers
 - class Stack
     * LIFO container
-    * data is stored in an array
+    * data is stored in an array of Objects
     * methods: putItem, takeTopItem, seeTopItem, size, isEmpty
     * make array expand and shrink if needed (see methods to expand an array and to remove null values from an array)
 - class Queue
     * FIFO container
-    * data is stored in an array
+    * data is stored in an array of Objects
     * methods: putItem, removeItem, seeFirstItem, seeLastItem, size, isEmpty
     * don't forget to shift an array when you remove items from it
     * make array expand and shrink if needed (see methods to expand an array and to remove null values from an array)
 - class List
     * random access container
-    * data is stored in an array
+    * data is stored in an array of Objects
     * methods: addItem, getItem(index), size, isEmpty
     * make array expand and shrink if needed (see methods to expand an array and to remove null values from an array)
 - class Range
@@ -130,3 +136,11 @@ etc.
     * only stores first and last element (both inclusive), for example range of (1, 10) stores only 1 and 10 in its fields
     * range must always go up (must be 1 to 10, cannot be 10 to 1)
     * methods: sum ranges, check if two ranges intersect
+- class CollectionsPerformanceTester
+    * класс в который можно передать разные коллекции из созданных самостоятельно или из JCF
+    * класс должен иметь методы для проверки производительности коллекций
+    * такие методы должны получать на входе количество элементов для наполнения коллекции и использовать методы shuffle или sort
+    * время операции должно засекаться и выводиться в консоль по окончании
+    * для подсказки выполнения задания см. стр745 учебника
+- JCF
+    * Переписать перечисленные здесь задания с использованием классов JCF там, где это удобно

@@ -1,10 +1,8 @@
 package collection.games.rpg.creatures;
 
 import collection.games.rpg.creatures.heros.Hero;
-import collection.games.rpg.interfaces.InventoryItem;
 import collection.games.rpg.interfaces.Lootable;
 import collection.games.rpg.items.Inventory;
-import collection.games.rpg.items.Item;
 import collection.games.rpg.items.Money;
 import collection.games.rpg.items.Wallet;
 import collection.games.rpg.locations.Location;
@@ -31,22 +29,18 @@ public abstract class Creature implements Lootable {
     }
 
     @Override
-    public void lootItems(Hero hero) {
+    public void lootItems(Hero toHero) {
         if (hp.isDead()) {
-            InventoryItem[] itemsToLoot = inventory.getItems();
-            inventory = new Inventory();
-            for (int i = 0; i < itemsToLoot.length; i++) {
-                hero.getInventory().addItem(itemsToLoot[i]);
-            }
+            toHero.getInventory().getItems().addAll(inventory.getItems());
+            inventory.getItems().clear();
         }
     }
 
     @Override
-    public void lootMoney(Hero hero) {
+    public void lootMoney(Hero toHero) {
         if (hp.isDead()) {
-            Money moneyToLoot = wallet.getMoney();
+            toHero.getWallet().addMoney(wallet.getMoney());
             wallet.setMoney(Money.ZERO);
-            hero.getWallet().addMoney(moneyToLoot);
         }
     }
 

@@ -10,7 +10,7 @@ public class Priest extends Hero{
 
     @Override
     public int attack() {
-        return 10;
+        return 200;
     }
 
     @Override

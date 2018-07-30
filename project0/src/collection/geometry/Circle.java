@@ -9,24 +9,25 @@ public class Circle extends GeometricObject implements Comparable<Circle>, Clone
     private static int numberOfCircles;
 
     private Circle() {
-        numberOfCircles++;
     }
 
     public Circle(double radius) {
         this();
         setRadius(radius);
+        numberOfCircles++;
     }
 
     public Circle(double radius, double centerX, double centerY) {
         this(radius);
         this.centerX = centerX;
         this.centerY = centerY;
+        numberOfCircles++;
     }
 
     public Circle(double radius, Color color) {
         super(color);
-        numberOfCircles++;
         setRadius(radius);
+        numberOfCircles++;
     }
 
     public static int getNumberOfCircles() {
