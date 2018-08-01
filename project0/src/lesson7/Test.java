@@ -1,10 +1,8 @@
 package lesson7;
 
-import collection.games.geo_quiz.GeoQuiz;
-import collection.geometry.Circle;
-import collection.geometry.Rectangle;
+import collection.games.geo_quiz.GeoQuizV1;
+import collection.games.geo_quiz.GeoQuizV2;
 import collection.mathematics.Rational;
-import collection.social_network.SocialNetwork;
 
 import java.util.Scanner;
 
@@ -21,10 +19,10 @@ public class Test {
         System.out.println(r3.getPrintString());
 
 
-        // Testing GeoQuiz
+        // Testing GeoQuizV1
 
         Scanner scanner = new Scanner(System.in);
-        GeoQuiz game1 = new GeoQuiz();
+        GeoQuizV1 game1 = new GeoQuizV1();
         while (game1.hasNextQuestion()) {
             String country = game1.askQuestion();
             System.out.print("Capital of " + country + " is: ");

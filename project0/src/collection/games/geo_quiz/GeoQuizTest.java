@@ -1,38 +1,41 @@
 package collection.games.geo_quiz;
 
-import java.util.Scanner;
+import collection.io.SmartScanner;
 
 public class GeoQuizTest {
 
     public static void main(String[] args) {
 
-//        Scanner scanner = new Scanner(System.in);
-//        GeoQuiz game1 = new GeoQuiz();
-//        while (game1.hasNextQuestion()) {
-//            String country = game1.askQuestion();
-//            System.out.print("Capital of " + country + " is: ");
-//            String userGuess = scanner.next();
-//            game1.makeGuess(userGuess);
-//        }
-//        game1.printResults();
+        SmartScanner scanner = new SmartScanner();
+//        testGeoQuizV1(scanner);
+        testGeoQuizV2(scanner);
 
-        GeoQuiz geoQuiz = new GeoQuiz();
-        geoQuiz.setDelegate(new GeoQuiz.Delegate() {
+    }
+
+    private static void testGeoQuizV1(SmartScanner scanner) {
+        GeoQuizV1 geoQuizV1 = new GeoQuizV1();
+        while (geoQuizV1.hasNextQuestion()) {
+            String country = geoQuizV1.askQuestion();
+            String userGuess = scanner.requestLine("Capital of " + country + " is: ");
+            geoQuizV1.makeGuess(userGuess);
+        }
+        geoQuizV1.printResults();
+    }
+
+    private static void testGeoQuizV2(SmartScanner scanner) {
+        GeoQuizV2 geoQuizV2 = new GeoQuizV2(3);
+        geoQuizV2.setDelegate(new GeoQuizV2.Delegate() {
             @Override
             public String askQuestion(String country) {
-                // ask user question
-                // get answer
-                // return answer
-                return null;
+                return scanner.requestLine("What is the capital of " + country + "?");
             }
 
             @Override
-            public void onEnd(String result) {
-                System.out.println(result);
+            public void onEnd(int numberOfQuestions, int numberOfCorrectGuesses) {
+                System.out.println("Game over! You correctly guessed " + numberOfCorrectGuesses + " capitals out of " + numberOfQuestions);
             }
         });
-        geoQuiz.start();
-
+        geoQuizV2.start();
     }
 
 }

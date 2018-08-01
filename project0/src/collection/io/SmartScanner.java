@@ -25,4 +25,12 @@ public class SmartScanner {
         }
     }
 
+    public String requestLine(String message) {
+        if (message != null) {
+            System.out.println(message);
+        }
+        // Any input is a String so, we don't need to catch InputMismatchException here
+        return scanner.nextLine();
+    }
+
 }
