@@ -49,19 +49,19 @@ public class GameField extends JPanel implements ActionListener {
     private void createApple() {
         newApple();
         for (int i = dots; i > 0; i--) {
-            while (x[i] == appleX && y[i] == appleY);
             newApple();
         }
     }
-    private void newApple(){
+
+    private void newApple() {
         appleX = new Random().nextInt(20) * DOT_SIZE;
         appleY = new Random().nextInt(20) * DOT_SIZE;
     }
 
     private void loadImages() {
-        ImageIcon iia = new ImageIcon("apple.png");
+        ImageIcon iia = new ImageIcon("src/collection/games/snake/apple.png");
         apple = iia.getImage();
-        ImageIcon iid = new ImageIcon("dot.png");
+        ImageIcon iid = new ImageIcon("src/collection/games/snake/dot.png");
         dot = iid.getImage();
     }
 

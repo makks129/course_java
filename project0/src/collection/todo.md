@@ -145,3 +145,9 @@ etc.
     * для подсказки выполнения задания см. стр745 учебника
 - JCF
     * Переписать перечисленные здесь задания с использованием классов JCF там, где это удобно
+    
+ ### Multithreading
+ - class Timer
+    * a class that represents a timer, which performs a task every N milliseconds
+    * input: number of milliseconds and a Runnable object
+    * timer pauses a separate thread for N milliseconds and then calls run() method on the object 

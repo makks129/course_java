@@ -102,6 +102,7 @@ etc.
 - class MathTestGame
     * Description: user enters an arithmetic operator (+, -, etc.), difficulty level (1-digit numbers, 2-digit numbers, etc.) 
     and number of questions and gets a test which asks him questions, takes his answers and prints results in the end
+- Make these games in 2 versions: with and without the Observer Pattern (see GeoQuizV1 and GeoQuizV1 for example)
 
 ### Time
 - class Calendar
@@ -144,3 +145,9 @@ etc.
     * для подсказки выполнения задания см. стр745 учебника
 - JCF
     * Переписать перечисленные здесь задания с использованием классов JCF там, где это удобно
+    
+ ### Multithreading
+ - class Timer
+    * a class that represents a timer, which performs a task every N milliseconds
+    * input: number of milliseconds and a Runnable object
+    * timer pauses a separate thread for N milliseconds and then calls run() method on the object 
