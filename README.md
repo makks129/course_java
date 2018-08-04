@@ -2,19 +2,26 @@
 
 ### Содержание репозитория
 
-- **project0** - IntelliJ IDEA проект, в котором мы пишем и тестируем Java код. В IDEA необходимо выбирать именно эту папку для открытия проекта!
+- **project** - IntelliJ IDEA проект, в котором мы пишем и тестируем Java код. В IDEA необходимо выбирать именно эту папку для открытия проекта!
   - **src**
+    - **collection** - Коллекция классов, собранных за весь курс, разбитая по темам
     - **lessonN** - Папки Java файлов с заданиями на каждый урок и домашними заданиями.
     - **teacher** - Папка, в которую я буду выкладывать тот код, который **я** писал на учительском компьютере во время урока. Если во время урока вы что-то не успели и хотели бы сравнить с тем, что писал на уроке я - здесь вы можете найти мой код.
 - **resources** - Материалы уроков (презентации и т.д.). Дополнительные ресурсы для самостоятелього изучения будут тоже добавляться сюда.
-  - Книга [Liang Y.D. - Introduction to Java programming](https://www.dropbox.com/s/2n590tuyfr9cdph/Liang_Y_D_-_Introduction_to_Java_Programming.pdf?dl=0)
 
 
 ### Полезные ресурсы
 
+Основной учебник по Java:
+  - [Liang Y.D. - Introduction to Java programming](https://www.dropbox.com/s/2n590tuyfr9cdph/Liang_Y_D_-_Introduction_to_Java_Programming.pdf?dl=0)
+
 Обучающие онлайн игры по Java:
   - [CodinGame](https://www.codingame.com/)
   - [CodeWars](http://www.codewars.com/)
+  
+Ресурсы по SQL:
+  - [SQLiteOnline.com](https://sqliteonline.com/) - website for executing statements and viewing SQLite databases
+  - [Khan Academy - SQL Course](https://www.khanacademy.org/computing/computer-programming/sql) - good course for SQL beginners
 
 
 ### Инструкции для установки Java и IDEA:

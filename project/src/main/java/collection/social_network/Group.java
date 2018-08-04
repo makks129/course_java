@@ -1,30 +1,34 @@
 package collection.social_network;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Group {
 
     private GroupProfile profile;
-    private User[] members;
-    private int membersCount;
+    private List<User> members;
     private User admin;
-    private Photo[] photos;
-    private Audio[] audios;
-    private Video[] videos;
+    private List<Photo> photos;
+    private List<Audio> audios;
+    private List<Video> videos;
     private Feed feed;
 
     public Group(GroupProfile profile, User admin) {
         this.profile = profile;
         this.admin = admin;
-        membersCount = 0;
-        members = new User[1000]; // Group can have maximum 1000 members
-        photos = new Photo[1000]; // Group can have maximum 1000 photos
-        audios = new Audio[1000]; // Group can have maximum 100 audios
-        videos = new Video[1000];  // Group can have maximum 100 videos
+        members = new ArrayList<>();
+        photos = new ArrayList<>();
+        audios = new ArrayList<>();
+        videos = new ArrayList<>();
         feed = new Feed();
         addUser(admin);
     }
 
-    private void addUser(User user) {
-        members[membersCount] = user;
-        membersCount++;
+    public void addUser(User user) {
+        members.add(user);
+    }
+
+    public void removeUser(User user) {
+        members.remove(user);
     }
 }

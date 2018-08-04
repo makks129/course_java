@@ -1,0 +1,104 @@
+[
+  {
+    "profile": {
+      "id": "user_1",
+      "name": "Max",
+      "age": 29,
+      "gender": 1,
+      "dateRegistered": 1533406487661
+    },
+    "friends": [],
+    "groups": [],
+    "photos": [],
+    "audios": [],
+    "videos": [],
+    "feed": {
+      "posts": []
+    }
+  },
+  {
+    "profile": {
+      "id": "user_2",
+      "name": "Stepa",
+      "age": -1,
+      "gender": 1,
+      "dateRegistered": 1533406487661
+    },
+    "friends": [],
+    "groups": [],
+    "photos": [],
+    "audios": [],
+    "videos": [],
+    "feed": {
+      "posts": []
+    }
+  },
+  {
+    "profile": {
+      "id": "user_3",
+      "name": "Masha",
+      "age": -1,
+      "gender": 2,
+      "dateRegistered": 1533406487661
+    },
+    "friends": [],
+    "groups": [],
+    "photos": [],
+    "audios": [],
+    "videos": [],
+    "feed": {
+      "posts": []
+    }
+  },
+  {
+    "profile": {
+      "id": "user_4",
+      "name": "Kostya",
+      "age": -1,
+      "gender": 1,
+      "dateRegistered": 1533406487661
+    },
+    "friends": [],
+    "groups": [],
+    "photos": [],
+    "audios": [],
+    "videos": [],
+    "feed": {
+      "posts": []
+    }
+  },
+  {
+    "profile": {
+      "id": "user_5",
+      "name": "Lena",
+      "age": -1,
+      "gender": 1,
+      "dateRegistered": 1533406487661
+    },
+    "friends": [],
+    "groups": [],
+    "photos": [],
+    "audios": [],
+    "videos": [],
+    "feed": {
+      "posts": []
+    }
+  },
+  {
+    "profile": {
+      "id": "user_6",
+      "name": "Sasha",
+      "age": -1,
+      "gender": 1,
+      "dateRegistered": 1533406487661
+    },
+    "friends": [],
+    "groups": [],
+    "photos": [],
+    "audios": [],
+    "videos": [],
+    "feed": {
+      "posts": []
+    }
+  }
+]

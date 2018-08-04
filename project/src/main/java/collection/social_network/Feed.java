@@ -1,11 +1,17 @@
 package collection.social_network;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Feed {
 
-    private Post[] posts;
+    private List<Post> posts;
 
     public Feed() {
-        posts = new Post[1000]; // Feed can have maximum 1000 posts
+        posts = new ArrayList<>();
     }
 
+    public List<Post> getPosts() {
+        return posts;
+    }
 }
