@@ -1,3 +1,0 @@
-## Snake
-
-Written by Stepa
