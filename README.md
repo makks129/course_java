@@ -18,10 +18,16 @@
 Обучающие онлайн игры по Java:
   - [CodinGame](https://www.codingame.com/)
   - [CodeWars](http://www.codewars.com/)
-  
+
 Ресурсы по SQL:
   - [SQLiteOnline.com](https://sqliteonline.com/) - website for executing statements and viewing SQLite databases
   - [Khan Academy - SQL Course](https://www.khanacademy.org/computing/computer-programming/sql) - good course for SQL beginners
+
+Networking:
+- [How I Explained REST to My Wife](http://www.looah.com/source/view/2284)
+
+Programming Patterns:
+- [Паттерны ООП в метафорах](https://habr.com/post/136766/)
 
 
 ### Инструкции для установки Java и IDEA:

@@ -77,7 +77,10 @@ etc.
 - method to get min of 2 numbers
 - method to check if the number is even
 - method to calculate factorial for number
+- method to calculate factorial for number (recursive!)
 - method to calculate GCD for 2 numbers
+- method to calculate GCD for 2 numbers (recursive! look for formula online)
+- method to calculate N-th Fibonacci number (recursive!)
 - method to find first N prime numbers and return them as an array
 
 ### Arrays

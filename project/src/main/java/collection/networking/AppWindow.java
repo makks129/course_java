@@ -5,18 +5,30 @@ import java.awt.*;
 
 public class AppWindow extends JFrame {
 
-    private JTextArea textArea = new JTextArea();
+    private JTextArea textArea;
+    private JButton buttonLoad;
 
     public AppWindow() {
-        setLayout(new BorderLayout());
-        add(new JScrollPane(textArea), BorderLayout.CENTER);
         setTitle("Application");
         setSize(500, 300);
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+        textArea = new JTextArea();
+        buttonLoad = new JButton("Load users");
+
+        JPanel panel = new JPanel();
+        panel.add(buttonLoad);
+        panel.add(new JScrollPane(textArea));
+        getContentPane().add(panel);
+
         setVisible(true);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 
     public JTextArea getTextArea() {
         return textArea;
+    }
+
+    public JButton getButtonLoad() {
+        return buttonLoad;
     }
 }
